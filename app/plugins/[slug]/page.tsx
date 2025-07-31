@@ -17,10 +17,10 @@ const pluginsData: { [key: string]: { name: string; description: string; feature
     ],
     image: "/placeholder.svg?height=600&width=900",
   },
-  "revit-data-exporter": {
-    name: "Revit Data Exporter",
+  "automated-door-window-schedules": {
+    name: "🔧Automated Door & Window Schedules",
     description:
-      "A robust plugin for exporting comprehensive data from your Revit models. Extract schedules, parameters, material quantities, and more into formats like Excel, CSV, or JSON for advanced analysis, reporting, and integration with other software.",
+      "Generate door and window schedules within seconds using our intelligent plugin. Fully customizable to match your company's formatting standards to deliver tender-ready schedules effortlessly.",
     features: [
       "Customizable data export options",
       "Supports multiple output formats (Excel, CSV, JSON)",
@@ -30,10 +30,10 @@ const pluginsData: { [key: string]: { name: string; description: string; feature
     ],
     image: "/placeholder.svg?height=600&width=900",
   },
-  "family-manager": {
-    name: "Family Manager Pro",
+  "company-specific-takeoff-sheets": {
+    name: "🏢 Company-Specific Takeoff Sheets",
     description:
-      "Take control of your Revit family library with Family Manager Pro. This plugin provides advanced tools for organizing, searching, and deploying Revit families, ensuring consistency and efficiency across all your projects.",
+      "Create material and quantity takeoff sheets directly from Revit using your company's unique templates. Ensure brand consistency across every project while eliminating hours of manual work.",
     features: [
       "Centralized family library management",
       "Advanced search and filtering",
@@ -43,10 +43,10 @@ const pluginsData: { [key: string]: { name: string; description: string; feature
     ],
     image: "/placeholder.svg?height=600&width=900",
   },
-  "clash-detection-assistant": {
-    name: "Clash Detection Assistant",
+  "rendering-layouts": {
+    name: "🎨 Rendering & Layouts",
     description:
-      "Streamline your clash detection workflows in Revit. This assistant helps identify and manage clashes between different building elements, providing clear reports and visualization tools to resolve conflicts efficiently.",
+      "Instantly produce professional 2D plans and rendering layouts from your Revit model. Let our AI engine take care of view setups, annotations, and polished presentation-ready sheets.",
     features: [
       "Automated clash detection rules",
       "Visual clash reporting",
@@ -56,10 +56,10 @@ const pluginsData: { [key: string]: { name: string; description: string; feature
     ],
     image: "/placeholder.svg?height=600&width=900",
   },
-  "sheet-generator": {
-    name: "Automated Sheet Generator",
+  "compliance-checker": {
+    name: "✅ Compliance Checker",
     description:
-      "Quickly generate and organize drawing sheets from your Revit models. This plugin automates the creation of sheets, placement of views, and population of title block information, saving significant time on documentation.",
+      "Ensure every model aligns with local and national codes using our smart compliance engine. Get real-time alerts, corrective suggestions, and correspondence tracking. Seamlessly integrate ASHRAE standards and jurisdiction-specific updates into your BIM environment.",
     features: [
       "Batch sheet creation",
       "Automated view placement",
@@ -69,23 +69,23 @@ const pluginsData: { [key: string]: { name: string; description: string; feature
     ],
     image: "/placeholder.svg?height=600&width=900",
   },
-  "parameter-sync": {
-    name: "Parameter Sync Tool",
+  "element-conversion": {
+    name: "📐 2D-to-3D Element Conversion",
     description:
-      "Ensure consistency across your Revit projects by synchronizing parameters. This tool allows you to manage and update shared parameters, project parameters, and family parameters across multiple files and elements.",
+      "Elevate your 2D workflows with our revolutionary 2D-to-3D conversion plugin. Whether it's a floor plan, section drawing, or detail sketch, our AI interprets and transforms it into intelligent 3D Revit elements in seconds.",
     features: [
-      "Synchronize shared and project parameters",
-      "Batch parameter updates",
-      "Parameter mapping and conversion",
-      "Error reporting for inconsistencies",
-      "Supports various parameter types",
+      "Convert lines, shapes, and symbols from DWG/DXF drawings into walls, windows, doors, and more.",
+      "Automatically apply BIM intelligence (parameters, categories, constraints) during conversion.",
+      "Perfect for rapid prototyping, legacy drawing upgrades, or accelerating early design phases.",
+      "Save countless hours of modeling time and reduce human error.",
     ],
     image: "/placeholder.svg?height=600&width=900",
   },
 }
 
 export default function PluginDetailPage({ params }: { params: { slug: string } }) {
-  const plugin = pluginsData[params.slug]
+  const { slug } = params
+  const plugin = pluginsData[slug]
 
   if (!plugin) {
     return (
@@ -101,6 +101,7 @@ export default function PluginDetailPage({ params }: { params: { slug: string } 
       </div>
     )
   }
+
 
   return (
     <div className="container py-12 md:py-24 lg:py-32 bg-background text-foreground">

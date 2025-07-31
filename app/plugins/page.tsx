@@ -32,7 +32,7 @@ const plugins = [
     image: "/placeholder.svg?height=200&width=300",
   },
   {
-    slug: "parameter-sync",
+    slug: "element-conversion",
     name: "📐 2D-to-3D Element Conversion",
     description: "Revolutionary 2D-to-3D conversion plugin",
     image: "/placeholder.svg?height=200&width=300",
