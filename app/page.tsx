@@ -5,21 +5,22 @@ import { PluginCard } from "@/components/plugin-card"
 
 const plugins = [
   {
-    slug: "revit-data-exporter",
-    name: "Revit Data Exporter",
-    description: "Export Revit model data to various formats for analysis and reporting.",
+    slug: "automated-door-window-schedules",
+    name: "🔧Automated Door & Window Schedules",
+    description: "Generate door and window schedules within seconds using our intelligent plugin. Fully customizable to match your company's formatting standards to deliver tender-ready schedules effortlessly.",
     image: "/placeholder.svg?height=200&width=300",
   },
   {
-    slug: "family-manager",
-    name: "Family Manager Pro",
-    description: "Efficiently manage and organize your Revit families with ease.",
+    slug: "company-specific-takeoff-sheets",
+    name: "🏢 Company-Specific Takeoff Sheets",
+    description:
+      "Create material and quantity takeoff sheets directly from Revit using your company's unique templates. Ensure brand consistency across every project while eliminating hours of manual work.",
     image: "/placeholder.svg?height=200&width=300",
   },
   {
-    slug: "clash-detection-assistant",
-    name: "Clash Detection Assistant",
-    description: "Automate and streamline clash detection workflows in Revit.",
+    slug: "rendering-layouts",
+    name: "🎨 Rendering & Layouts",
+    description: "Instantly produce professional 2D plans and rendering layouts from your Revit model. Let our AI engine take care of view setups, annotations, and polished presentation-ready sheets.",
     image: "/placeholder.svg?height=200&width=300",
   },
 ]
